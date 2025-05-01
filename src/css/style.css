@@ -1,113 +1,118 @@
+/* Reset e padrão base */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     justify-content: center;
+    min-height: 100vh;
     background-color: rgb(34, 190, 190);
     font-family: Arial, sans-serif;
-}
-
-#container {
+  }
+  
+  #container {
     background-color: rgb(85, 76, 76);
     width: 500px;
     padding: 20px;
+    border-radius: 8px;
     color: aliceblue;
-    border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header {
-    margin-bottom: 15px;
-    font-weight: bolder;
-    font-size: 15px;
-}
-
-section {
-    margin: 2px 0;
+  }
+  
+  header {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  section {
     width: 100%;
-}
-
-.operation {
-    padding: 10px;
+  }
+  .operation {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-::-webkit-input-placeholder {
-    color: rgb(88, 48, 48);
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    color: rgb(97, 55, 55);  
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    color: rgb(114, 54, 54);  
- }
- 
- :-ms-input-placeholder {  
-    color: red;  
- }
-input[type="number"] {
+    padding: 10px 0;
+  }
+  
+  input[type="number"] {
     width: 75px;
     height: 35px;
     margin: 0 10px;
-    text-align: center;
+    text-align: center;           /* Centraliza o texto digitado */
     border-radius: 6px;
     background-color: rgb(58, 233, 180);
     color: rgb(5, 5, 5);
     font-weight: 700;   
     border: none;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-button {
+  input::placeholder {
+    text-align: center;
+  }  
+  ::placeholder {
+    color: rgb(88, 48, 48);
+  }
+  
+  button {
     width: 60px;
     height: 35px;
     border-radius: 6px;
-    font-weight: bolder;
     font-size: large;
-    background-color: white;
-    color: rgb(255, 255, 255);
+    font-weight: bold;
+    color: white;
     border: none;
     cursor: pointer;
     margin: 0 10px;
-}
-#sum{
+  }
+  button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+  }
+  .operation[data-operation="sum"] button {
     background-color: rgb(52, 248, 68);
-}
-#subtract{
+  }
+  
+  .operation[data-operation="subtract"] button {
     background-color: brown;
-}
-#multiply{
+  }
+  
+  .operation[data-operation="multiply"] button {
     background-color: rgb(0, 77, 139);
-}
-#division{
+  }
+  
+  .operation[data-operation="division"] button {
     background-color: rgb(255, 209, 6);
-}
-.result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: black;
+  }
+  
+  .result {
     width: 75px;
     height: 35px;
-    font-weight: bold;
     margin-left: 10px;
-    background-color: rgb(34, 190, 190);
     border-radius: 6px;
-}
-
-.symbol {
+    background-color: rgb(34, 190, 190);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .symbol {
     font-size: 24px;
     font-weight: bold;
     margin: 0 8px;
     color: white;
-}
+  }

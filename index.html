@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/style.css">
-    <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="src/css/style.css"/>
+  <title>BasicCalc</title>
 </head>
 <body>
-    <div id="container">
-        <header>
-            <h1>BasicCalc</h1>
-        </header>
-        <section>
-            <div class="operation">
-                <input type="number" placeholder="A" id="sum1">
-                <button id="sum" onclick="somar()">+</button>
-                <input type="number" placeholder="B" id="sum2"> 
-                <span class="symbol">=</span>
-                <span id="resultsum" class="result">x</span>
-            </div>
-            <div class="operation">
-                <input type="number" placeholder="A" id="subtract1">
-                <button id="subtract" onclick="subtrair()">-</button>
-                <input type="number" placeholder="B" id="subtract2"> 
-                <span class="symbol">=</span> 
-                <span id="resultsubtract" class="result">x</span>
-            </div>
-            <div class="operation">
-                <input type="number" placeholder="A" id="multiply1">
-                <button id="multiply" onclick="multiplicar()">x</button>
-                <input type="number" placeholder="B" id="multiply2"> 
-                <span class="symbol">=</span> 
-                <span id="resultmultiply" class="result">x</span>
-            </div>
-            <div class="operation">
-                <input type="number" placeholder="A" id="division1">
-                <button id="division" onclick="dividir()">/</button>
-                <input type="number" placeholder="B" id="division2"> 
-                <span class="symbol">=</span>
-                <span id="resultdivision" class="result">x</span>
-            </div>
-        </section>
-    </div>
-    <script src="src/javascript/script.js"></script>
+  <div id="container">
+    <header>
+      <h1>BasicCalc</h1>
+    </header>
+    <section id="operations">
+      <div class="operation" data-operation="sum">
+        <input type="number" placeholder="A" />
+        <button>+</button>
+        <input type="number" placeholder="B" />
+        <span class="symbol">=</span>
+        <span class="result">x</span>
+      </div>
+      <div class="operation" data-operation="subtract">
+        <input type="number" placeholder="A" />
+        <button>-</button>
+        <input type="number" placeholder="B" />
+        <span class="symbol">=</span>
+        <span class="result">x</span>
+      </div>
+      <div class="operation" data-operation="multiply">
+        <input type="number" placeholder="A" />
+        <button>x</button>
+        <input type="number" placeholder="B" />
+        <span class="symbol">=</span>
+        <span class="result">x</span>
+      </div>
+      <div class="operation" data-operation="division">
+        <input type="number" placeholder="A" />
+        <button>/</button>
+        <input type="number" placeholder="B" />
+        <span class="symbol">=</span>
+        <span class="result">x</span>
+      </div>
+    </section>
+  </div>
+  <script src="src/javascript/script.js"></script>
 </body>
 </html>

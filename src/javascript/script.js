@@ -1,24 +1,34 @@
-function somar(){
-    const num1 = parseFloat(document.getElementById("sum1").value)
-    const num2 = parseFloat(document.getElementById("sum2").value)
-    let result = num1 + num2
-    document.getElementById("resultsum").textContent = result
-}
-function subtrair(){
-    const num1 = parseFloat(document.getElementById("subtract1").value)
-    const num2 = parseFloat(document.getElementById("subtract2").value)
-    let result = num1 - num2
-    document.getElementById("resultsubtract").textContent = result
-}
-function multiplicar(){
-    const num1 = parseFloat(document.getElementById("multiply1").value)
-    const num2 = parseFloat(document.getElementById("multiply2").value)
-    let result = num1 * num2
-    document.getElementById("resultmultiply").textContent = result
-}
-function dividir(){
-    const num1 = parseFloat(document.getElementById("division1").value)
-    const num2 = parseFloat(document.getElementById("division2").value)
-    let result = num1 / num2
-    document.getElementById("resultdivision").textContent = result
-}
+document.querySelectorAll(".operation").forEach(operation => {
+    const btn = operation.querySelector("button");
+    btn.addEventListener("click", () => {
+      const num1 = parseFloat(operation.querySelectorAll("input")[0].value);
+      const num2 = parseFloat(operation.querySelectorAll("input")[1].value);
+      const resultSpan = operation.querySelector(".result");
+      const type = operation.dataset.operation;
+  
+      let result;
+  
+      switch (type) {
+        case "sum":
+          result = num1 + num2;
+          break;
+        case "subtract":
+          result = num1 - num2;
+          break;
+        case "multiply":
+          result = num1 * num2;
+          break;
+        case "division":
+          if (num2 === 0) {
+            result = "Erro";
+          } else {
+            result = num1 / num2;
+            result = Number.isInteger(result) ? result : result.toFixed(2);
+          }
+          break;
+      }
+  
+      resultSpan.textContent = isNaN(result) ? "Invalid" : result;
+    });
+  });
+  
