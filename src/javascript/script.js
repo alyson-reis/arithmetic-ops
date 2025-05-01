@@ -29,6 +29,9 @@ document.querySelectorAll(".operation").forEach(operation => {
       }
   
       resultSpan.textContent = isNaN(result) ? "Invalid" : result;
+      if (result > 1000000 || result < -1000000){
+        resultSpan.textContent = "Invalid"
+      }
     });
   });
   
