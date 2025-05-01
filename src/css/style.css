@@ -116,9 +116,14 @@
     margin: 0 8px;
     color: white;
   }
-  @media (max-width: 600px){
+  @media (max-width: 500px){
     #container{
-      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 370px;
+      height: 500px;
+
     }
     
   }
