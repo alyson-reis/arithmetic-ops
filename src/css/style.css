@@ -116,3 +116,9 @@
     margin: 0 8px;
     color: white;
   }
+  @media (max-width: 600px){
+    #container{
+      width: 400px;
+    }
+    
+  }
